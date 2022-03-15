@@ -1,0 +1,99 @@
+
+<!-- ------------------------------------------------------------------------------><!DOCTYPE html>
+<html>
+  <head>
+    <title>Product Landing</title>
+    <link rel="icon" href="./css/assets/guitar.svg" type="image/icon type">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/mobile.css">
+    <link rel="stylesheet" href="./css/desktop.css" media="screen and (min-width:800px)">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Engagement&family=Nunito:wght@200;400;700;900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="header-bar">
+        <div class="header-logo"><img class="header-logo--img" id="header-img" src="./css/assets/guitar.svg" alt="logo">
+          <p class="header-logo--text">Super Guitars</p>
+        </div>
+        <div class="menu-btn" id="menuBtn"></div>
+      </div>
+      <nav class="header-nav" id="nav-bar">
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link" href="#whyUs">Why us?</a></li>
+          <li class="nav-item"><a class="nav-link" href="#products">Our products</a></li>
+          <li class="nav-item"><a class="nav-link" href="#artists">Our artists</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main" id="main">
+      <h1 class="main__title">Guitars for life</h1>
+      <p class="main__intro">hendrerit dolor magna eget est lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis</p>
+      <form class="contact" id="form" action="https://www.freecodecamp.com/email-submit">
+        <label for="email">Contact us</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+        <input id="submit" type="submit" value="send">
+      </form>
+      <div class="video-container">
+        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/SJoJcrOrLqI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <section class="about" id="whyUs">
+        <h2 class="about__title">Why Us?</h2>
+        <div class="card-container">
+          <article class="about-card"><span class="about-card__icon"></span>
+            <h3 class="about-card__title">Good prices</h3>
+            <p class="about-card__description">cras pulvinar mattis nunc sed blandit libero volutpat sed cras ornare arcu dui vivamus arcu</p>
+          </article>
+          <article class="about-card"><span class="about-card__icon"></span>
+            <h3 class="about-card__title">Durability</h3>
+            <p class="about-card__description">cras pulvinar mattis nunc sed blandit libero volutpat sed cras ornare arcu dui vivamus arcu</p>
+          </article>
+          <article class="about-card"><span class="about-card__icon"></span>
+            <h3 class="about-card__title">Shipping</h3>
+            <p class="about-card__description">cras pulvinar mattis nunc sed blandit libero volutpat sed cras ornare arcu dui vivamus arcu</p>
+          </article>
+        </div>
+      </section>
+      <section class="products" id="products">
+        <h2 class="products__title">Our Products</h2>
+        <div class="product-container">
+          <article class="guitar">
+            <div class="guitar__img"><img src="https://cdn.shopify.com/s/files/1/0814/7883/products/IMG_7264_d6817aed-ebfe-432a-8196-1aa256be822c.jpg?v=1571439647" alt="SG Guitar"/></div>
+            <h3 class="guitar__model">SG Guitar</h3>
+            <ul class="guitar__specs">
+              <li>sagittis purus sit amet volutpat</li>
+              <li>vel pretium lectus quam id</li>
+              <li>commodo ullamcorper a lacus vestibulum</li>
+              <li>elementum pulvinar etiam non quam</li>
+            </ul>
+          </article>
+          <article class="guitar">
+            <div class="guitar__img"><img src="https://dygtyjqp7pi0m.cloudfront.net/i/36160/33006706_1.jpg?v=8D6BAC74B329BD0" alt="Expectrum V"/></div>
+            <h3 class="guitar__model">Expectrum V</h3>
+            <ul class="guitar__specs">
+              <li>sagittis purus sit amet volutpat</li>
+              <li>vel pretium lectus quam id</li>
+              <li>commodo ullamcorper a lacus vestibulum</li>
+              <li>elementum pulvinar etiam non quam</li>
+            </ul>
+          </article>
+          <article class="guitar">
+            <div class="guitar__img"><img src="https://i.ebayimg.com/00/s/MTAyNFg3Njg=/z/WhcAAOSw58ZetDvd/$_86.JPG" alt="Strategy"/></div>
+            <h3 class="guitar__model">Strategy</h3>
+            <ul class="guitar__specs">
+              <li>sagittis purus sit amet volutpat</li>
+              <li>vel pretium lectus quam id</li>
+              <li>commodo ullamcorper a lacus vestibulum</li>
+              <li>elementum pulvinar etiam non quam</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+      <section class="artists" id="artists"></section>
+    </main>
+    <script src="./js/menu.js"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>

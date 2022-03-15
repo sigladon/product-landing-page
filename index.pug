@@ -1,0 +1,95 @@
+mixin navItem(item,id)
+    li.nav-item: a.nav-link(href=id)= item
+
+mixin article(title)
+    article.about-card
+        span.about-card__icon
+        h3.about-card__title= title
+        p.about-card__description cras pulvinar mattis nunc sed blandit libero volutpat sed cras ornare arcu dui vivamus arcu
+
+mixin guitar(model, img, alt)
+    article.guitar
+        .guitar__img
+            img(src=img alt=alt)
+        h3.guitar__model= model
+        ul.guitar__specs
+            li sagittis purus sit amet volutpat
+            li vel pretium lectus quam id
+            li commodo ullamcorper a lacus vestibulum
+            li elementum pulvinar etiam non quam
+
+
+// ----------------------------------------------------------------------------
+doctype html
+html
+    head
+        title Product Landing
+        link(rel="icon" href="./css/assets/guitar.svg" type="image/icon type")
+        meta(charset="UTF-8")
+        meta(name="viewport",content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="./css/mobile.css")
+        link(rel="stylesheet" href="./css/desktop.css" media="screen and (min-width:800px)")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href!="https://fonts.googleapis.com/css2?family=Engagement&family=Nunito:wght@200;400;700;900&display=swap" rel="stylesheet")
+    body
+        header.header#header
+            .header-bar
+                .header-logo
+                    img.header-logo--img#header-img(src="./css/assets/guitar.svg" alt="logo")
+                    p.header-logo--text Super Guitars
+                .menu-btn#menuBtn
+            nav.header-nav#nav-bar
+                ul.nav
+                    +navItem("Why us?", "#whyUs")
+                    +navItem("Our products", "#products")
+                    +navItem("Our artists", "#artists")
+        main.main#main
+            h1.main__title Guitars for life
+            p.main__intro hendrerit dolor magna eget est lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+            form.contact#form(action="https://www.freecodecamp.com/email-submit")
+                label(for="email") Contact us
+                input(type="email" id="email" name="email" placeholder="Enter your email" )
+                input#submit(type="submit" value="send")
+
+
+
+
+            .video-container
+                iframe#video(width="560" height="315" src="https://www.youtube.com/embed/SJoJcrOrLqI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+            section.about#whyUs
+                h2.about__title Why Us?
+                .card-container
+                    +article("Good prices")
+                    +article("Durability")
+                    +article("Shipping")
+            section.products#products
+                h2.products__title Our Products
+                .product-container
+                    +guitar("SG Guitar", "https://cdn.shopify.com/s/files/1/0814/7883/products/IMG_7264_d6817aed-ebfe-432a-8196-1aa256be822c.jpg?v=1571439647", "SG Guitar")
+                    +guitar("Expectrum V", "https://dygtyjqp7pi0m.cloudfront.net/i/36160/33006706_1.jpg?v=8D6BAC74B329BD0", "Expectrum V")
+                    +guitar("Strategy", "https://i.ebayimg.com/00/s/MTAyNFg3Njg=/z/WhcAAOSw58ZetDvd/$_86.JPG", "Strategy")
+
+            section.artists#artists
+
+        script(src="./js/menu.js")
+        script(src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js")
+    
+
+//-
+  <header id="header">
+    <nav id="nav-bar">
+      <ul>
+        <li><a class="nav-link" href="#one">a</a></li>
+        <li><a class="nav-link" href="#two">b</a></li>
+        <li><a class="nav-link" href="#three">c</a></li>
+      </ul>
+    </nav>
+  </header>
+  <form id="form" action="https://www.freecodecamp.com/email-submit">
+    <input name="email" id="email" type="email" placeholder="email" required>
+    <input id="submit" type="submit" value="yes" class="btn">
+  </form>
+  <section id="one"><iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/zXZosdlVBxE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></section>
+  <section id="two"><p>hola</p></section>
+  <section id="three"><p>adiós</p></section>

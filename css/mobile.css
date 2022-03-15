@@ -1,0 +1,215 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-padding-top: 60px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Nunito", sans-serif;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+          box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  background-color: white;
+}
+.header-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px;
+}
+.header-bar .header-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header-bar .header-logo--img {
+  width: 40px;
+  height: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.header-bar .header-logo--text {
+  margin-left: 8px;
+  font-family: "Engagement", cursive;
+  font-size: 2.8rem;
+}
+.header-bar .menu-btn {
+  width: 40px;
+  height: 40px;
+  background-image: url("./assets/menu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+  cursor: pointer;
+}
+.header-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  place-content: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.header-nav .nav {
+  margin: 20px 0;
+}
+.header-nav .nav-item {
+  margin: 12px;
+  text-align: center;
+  list-style: none;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.header-nav .nav-item .nav-link {
+  text-decoration: none;
+  color: black;
+}
+.header-nav__show {
+  height: 150px;
+}
+
+.main {
+  width: 80%;
+  max-width: 1200px;
+  margin: 68px auto;
+}
+.main__title {
+  margin: 12px 0;
+  font-size: 3.2rem;
+  font-weight: 800;
+  text-align: center;
+}
+.main__intro {
+  font-size: 1.6rem;
+  text-align: justify;
+}
+.main .contact {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+      grid-template-areas: "title title" "input button";
+  margin: 20px 0;
+}
+.main .contact label {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  margin: 8px 0;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  grid-area: title;
+  font-size: 2.4rem;
+  font-weight: 400;
+}
+.main .contact #email {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  padding: 4px;
+  font-size: 1.6rem;
+  grid-area: input;
+  border: 1px solid gray;
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+}
+.main .contact #submit {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  padding: 4px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  grid-area: button;
+  border: 1px solid #ef1032;
+  border-radius: 0 8px 8px 0;
+  color: white;
+  background-color: #e84c63;
+}
+.main .video-container {
+  aspect-ratio: 16/9;
+}
+.main .video-container #video {
+  width: 100%;
+  height: 100%;
+}
+.main .about {
+  margin: 24px 0;
+}
+.main .about__title {
+  text-align: center;
+  font-size: 2.4rem;
+  color: #ef1032;
+}
+.main .about .card-container {
+  display: -ms-grid;
+  display: grid;
+  gap: 16px;
+  margin: 12px auto;
+}
+.main .about .card-container .about-card {
+  padding: 16px;
+  border-radius: 8px;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.main .about .card-container .about-card:nth-child(1) > span {
+  background-image: url("./assets/about-dolar.svg");
+}
+.main .about .card-container .about-card:nth-child(2) > span {
+  background-image: url("./assets/about-time.svg");
+}
+.main .about .card-container .about-card:nth-child(3) > span {
+  background-image: url("./assets/about-truck.svg");
+}
+.main .about .card-container .about-card__icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+.main .about .card-container .about-card__title {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.main .about .card-container .about-card__description {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.main .products__title {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+.main .products .product-container .guitar__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
