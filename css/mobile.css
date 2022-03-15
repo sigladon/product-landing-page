@@ -7,13 +7,14 @@
 
 html {
   font-size: 62.5%;
-  scroll-padding-top: 60px;
+  scroll-padding-top: 80px;
 }
 
 body {
   width: 100vw;
   height: 100vh;
   font-family: "Nunito", sans-serif;
+  overflow-X: hidden;
 }
 
 .header {
@@ -23,6 +24,7 @@ body {
   -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
           box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   background-color: white;
+  z-index: 1000;
 }
 .header-bar {
   display: -webkit-box;
@@ -51,6 +53,7 @@ body {
      object-fit: cover;
 }
 .header-bar .header-logo--text {
+  width: 14rem;
   margin-left: 8px;
   font-family: "Engagement", cursive;
   font-size: 2.8rem;
@@ -100,7 +103,7 @@ body {
 .main {
   width: 80%;
   max-width: 1200px;
-  margin: 68px auto;
+  margin: 100px auto;
 }
 .main__title {
   margin: 12px 0;
@@ -161,7 +164,7 @@ body {
   height: 100%;
 }
 .main .about {
-  margin: 24px 0;
+  margin: 100px 0;
 }
 .main .about__title {
   text-align: center;
@@ -202,14 +205,178 @@ body {
   font-size: 1.2rem;
   font-weight: 400;
 }
+.main .products {
+  margin: 100px 0;
+}
 .main .products__title {
   text-align: center;
   font-size: 2.8rem;
   font-weight: 700;
+}
+.main .products .product-container {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 270px));
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 12px;
+}
+.main .products .product-container .guitar {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (auto)[4];
+  grid-template-rows: repeat(4, auto);
+  border-radius: 8px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+          box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+.main .products .product-container .guitar > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+.main .products .product-container .guitar > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+}
+.main .products .product-container .guitar > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+.main .products .product-container .guitar > *:nth-child(4) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+}
+.main .products .product-container .guitar > *:nth-child(5) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+}
+.main .products .product-container .guitar > *:nth-child(6) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+}
+.main .products .product-container .guitar > *:nth-child(7) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+}
+.main .products .product-container .guitar > *:nth-child(8) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+}
+.main .products .product-container .guitar > *:nth-child(9) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+.main .products .product-container .guitar > *:nth-child(10) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+}
+.main .products .product-container .guitar > *:nth-child(11) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+}
+.main .products .product-container .guitar > *:nth-child(12) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
+}
+.main .products .product-container .guitar > *:nth-child(13) {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+}
+.main .products .product-container .guitar > *:nth-child(14) {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+}
+.main .products .product-container .guitar > *:nth-child(15) {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+}
+.main .products .product-container .guitar > *:nth-child(16) {
+  -ms-grid-row: 4;
+  -ms-grid-column: 4;
+}
+.main .products .product-container .guitar__img {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 1/1/5/3;
+  padding: 8px;
 }
 .main .products .product-container .guitar__img img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.main .products .product-container .guitar__model {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: 1/3/2/5;
+  margin: 8px 0;
+  -ms-grid-row-align: center;
+  -ms-grid-column-align: center;
+  place-self: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.main .products .product-container .guitar__specs {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: 2/3/5/5;
+  margin: 4px 8px 12px;
+  font-size: 1.2rem;
+  list-style-position: inside;
+}
+.main .artists {
+  margin: 100px 0;
+}
+.main .artists__title {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.main .artists-container {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 260px));
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 4px;
+  padding-bottom: 28px;
+}
+.main .artists-container .artist {
+  position: relative;
+}
+.main .artists-container .artist__photo {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main .artists-container .artist__name {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: rgba(180, 80, 60, 0.6);
+}
+
+@media screen and (min-width: 768px) {
+  h5 {
+    color: red;
+  }
 }

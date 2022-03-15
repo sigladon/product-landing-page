@@ -1,3 +1,82 @@
-h5 {
-  color: red;
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header-bar {
+  display: block;
+  padding: 16px;
+}
+.header-bar .menu-btn {
+  display: none;
+}
+.header-nav {
+  height: auto;
+  width: auto;
+  display: block;
+  margin-right: 16px;
+}
+.header-nav .nav {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main {
+  width: 60%;
+  margin: 140px auto;
+}
+.main__title {
+  font-size: 4.4rem;
+}
+.main__intro {
+  font-size: 2rem;
+}
+.main .contact label {
+  font-size: 2.8rem;
+}
+.main .contact #email {
+  font-size: 2rem;
+  width: 30rem;
+}
+.main .about {
+  margin: 140px 0;
+}
+.main .about__title {
+  font-size: 3.2rem;
+  margin: 16px 0;
+}
+.main .about .card-container .about-card__icon {
+  width: 28px;
+  height: 28px;
+}
+.main .about .card-container .about-card__title {
+  font-size: 2.4rem;
+}
+.main .about .card-container .about-card__description {
+  font-size: 1.6rem;
+}
+.main .products {
+  margin: 140px 0;
+}
+.main .products__title {
+  font-size: 3.2rem;
+  margin: 16px 0;
+}
+.main .products .product-container {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+  gap: 16px;
+}
+.main .products .product-container .guitar__model {
+  font-size: 2rem;
+}
+.main .products .product-container .guitar__specs {
+  font-size: 1.6rem;
 }

@@ -1,3 +1,82 @@
-h5 {
-    color: red;
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-bar {
+        display: block;
+        padding: 16px;
+        .menu-btn {
+            display: none;
+        }
+    }
+    &-nav {
+        height: auto;
+        width: auto;
+        display: block;
+        margin-right: 16px;
+        .nav {
+            margin: 0;
+            display: flex;
+        }
+    }
+}
+
+.main {
+    width: 60%;
+    margin: 140px auto;
+    &__title {
+        font-size: 4.4rem;
+    } 
+    &__intro {
+        font-size: 2rem;
+    }
+    .contact {
+        label {
+            font-size: 2.8rem;
+        }
+        #email {
+            font-size: 2rem;
+            width: 30rem;
+        }
+    }
+    .about {
+        margin: 140px 0;
+        &__title {
+            font-size: 3.2rem;
+            margin: 16px 0;
+        }
+        .card-container {
+            .about-card {
+                &__icon {
+                    width: 28px;
+                    height: 28px;
+                }
+                &__title {
+                    font-size: 2.4rem;
+                }
+                &__description {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+    .products {
+        margin: 140px 0;
+        &__title {
+            font-size: 3.2rem;
+            margin: 16px 0;
+        }
+        .product-container {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+            gap: 16px;
+            .guitar {
+                &__model {
+                    font-size: 2rem;
+                }
+                &__specs {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
 }

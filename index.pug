@@ -5,7 +5,7 @@ mixin article(title)
     article.about-card
         span.about-card__icon
         h3.about-card__title= title
-        p.about-card__description cras pulvinar mattis nunc sed blandit libero volutpat sed cras ornare arcu dui vivamus arcu
+        p.about-card__description Cras pulvinar mattis nunc sed blandit libero volutpat sed cras ornare arcu dui vivamus arcu
 
 mixin guitar(model, img, alt)
     article.guitar
@@ -13,13 +13,19 @@ mixin guitar(model, img, alt)
             img(src=img alt=alt)
         h3.guitar__model= model
         ul.guitar__specs
-            li sagittis purus sit amet volutpat
-            li vel pretium lectus quam id
-            li commodo ullamcorper a lacus vestibulum
-            li elementum pulvinar etiam non quam
+            li Sagittis purus sit amet volutpat
+            li Vel pretium lectus quam id
+            li Commodo ullamcorper a lacus vestibulum
+            li Elementum pulvinar etiam non quam
+
+mixin artist(name, img)
+    figure.artist
+        img.artist__photo(src=img alt=name)
+        p.artist__name= name
 
 
 // ----------------------------------------------------------------------------
+
 doctype html
 html
     head
@@ -46,7 +52,7 @@ html
                     +navItem("Our artists", "#artists")
         main.main#main
             h1.main__title Guitars for life
-            p.main__intro hendrerit dolor magna eget est lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+            p.main__intro Hendrerit dolor magna eget est lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
             form.contact#form(action="https://www.freecodecamp.com/email-submit")
                 label(for="email") Contact us
                 input(type="email" id="email" name="email" placeholder="Enter your email" )
@@ -68,28 +74,19 @@ html
                 .product-container
                     +guitar("SG Guitar", "https://cdn.shopify.com/s/files/1/0814/7883/products/IMG_7264_d6817aed-ebfe-432a-8196-1aa256be822c.jpg?v=1571439647", "SG Guitar")
                     +guitar("Expectrum V", "https://dygtyjqp7pi0m.cloudfront.net/i/36160/33006706_1.jpg?v=8D6BAC74B329BD0", "Expectrum V")
-                    +guitar("Strategy", "https://i.ebayimg.com/00/s/MTAyNFg3Njg=/z/WhcAAOSw58ZetDvd/$_86.JPG", "Strategy")
+                    +guitar("Strategy", "https://www.owl-guitars.de/Portals/0/Entity/118/Images/IMG-20180209-WA0009.jpg", "Strategy")
 
             section.artists#artists
+                h2.artists__title Our artists
+                .artists-container
+                    +artist("Lorem ipsum", "http://mediad.publicbroadcasting.net/p/wjsp/files/styles/x_large/public/201706/Eric_Johnson_5416b.jpg")
+                    +artist("Lorem ipsum", "https://www.rollingstone.com/wp-content/uploads/2018/06/rs-nick-valensi-6d9ff9b6-248a-4c7a-b310-9ee6b387fe7d.jpg")
+                    +artist("Lorem ipsum", "https://www.nme.com/wp-content/uploads/2020/11/StephenCarpenter2000x1270.jpg")
+                    +artist("Lorem ipsum", "https://www.mercurynews.com/wp-content/uploads/2019/09/SJM-L-MAIDEN6-0910.jpg?w=1024&h=769")
+                    +artist("Lorem ipsum", "https://guitar.com/wp-content/uploads/2019/12/Chris-poland@1400x1050.jpg")
+                    +artist("Lorem ipsum", "https://www.nadja.co/wp-content/uploads/2019/02/Featured-img-Orianthi_2017.jpg")
 
         script(src="./js/menu.js")
         script(src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js")
     
 
-//-
-  <header id="header">
-    <nav id="nav-bar">
-      <ul>
-        <li><a class="nav-link" href="#one">a</a></li>
-        <li><a class="nav-link" href="#two">b</a></li>
-        <li><a class="nav-link" href="#three">c</a></li>
-      </ul>
-    </nav>
-  </header>
-  <form id="form" action="https://www.freecodecamp.com/email-submit">
-    <input name="email" id="email" type="email" placeholder="email" required>
-    <input id="submit" type="submit" value="yes" class="btn">
-  </form>
-  <section id="one"><iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/zXZosdlVBxE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></section>
-  <section id="two"><p>hola</p></section>
-  <section id="three"><p>adiós</p></section>
